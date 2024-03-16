@@ -1,90 +1,36 @@
-
-# Banking Web Application
-
-## Overview
-
-This is a full-stack web application for managing user accounts, transactions, and authentication in a banking context. The application is built using a microservices architecture, with Nest.js for the backend, GraphQL for communication between services, Next.js for the frontend, and Next UI for styling.
-
-## Features
-
-- **Microservices Architecture**: The application is divided into several microservices to handle different aspects of banking functionality.
-  - **Account Service**: Manages user accounts, balances, and transactions.
-  - **Authentication Service**: Handles user authentication and authorization.
-  - **Transaction Service**: Manages transaction history.
-  - **Frontend Service**: Next.js application that interacts with the microservices.
-
-- **GraphQL**: The services communicate with each other using GraphQL, providing a flexible and efficient way to query and mutate data.
-
-- **Next UI Styling**: Styling for the frontend is implemented using Next UI, providing a clean and responsive user interface.
-
-## Technologies Used
-
-- **Backend**:
-  - Nest.js
-  - GraphQL
-  - Prisma for database access
-  - JWT for authentication
-
-- **Frontend**:
-  - Next.js
-  - Next UI for styling
-  - GraphQL for data fetching
-
-## Prerequisites
-
-- Node.js and npm installed
-- Docker for running PostgreSQL database in a container
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/banking-app.git
-   cd banking-app
-   ```
+First, run the development server:
 
-2. **Install Dependencies:**
-   ```bash
-   # Install backend dependencies
-   cd backend
-   npm install
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-   # Install frontend dependencies
-   cd ../frontend
-   npm install
-   ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-3. **Setup PostgreSQL Database:**
-   - Create a `docker-compose.yml` file (see provided example).
-   - Run `docker-compose up dev-db -d` to start the PostgreSQL container.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-4. **Configure Microservices:**
-   - Update environment variables in each microservice's `.env` file.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-5. **Run the Application:**
-   ```bash
-   # Run each microservice separately
-   cd backend/auth-service
-   npm run start:dev
+## Learn More
 
-   cd backend/account-service
-   npm run start:dev
+To learn more about Next.js, take a look at the following resources:
 
-   cd backend/transaction-service
-   npm run start:dev
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   cd frontend
-   npm run dev
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-6. **Access the Application:**
-   - Open your browser and go to `http://localhost:3000` to access the Next.js application.
+## Deploy on Vercel
 
-## Contributing
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-If you would like to contribute to the development of this application, please follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
